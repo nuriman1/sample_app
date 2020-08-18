@@ -17,6 +17,12 @@ gem "kaminari-bootstrap"
 
 gem "figaro"
 
+gem "active_storage_validations"
+
+gem "image_processing"
+
+gem "mini_magick"
+
 gem "bootstrap-sass", "3.4.1"
 
 gem "config"
