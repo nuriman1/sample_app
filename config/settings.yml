@@ -9,6 +9,7 @@ links:
     screencast_series: https://screencasts.railstutorial.org/
     news: https://news.railstutorial.org/ 
     michael_hartl: https://www.michaelhartl.com/
+    gravatar: https://gravatar.com/emails
   
 validations:
   name: 
