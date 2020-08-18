@@ -15,6 +15,8 @@ gem "kaminari"
 
 gem "kaminari-bootstrap"
 
+gem "figaro"
+
 gem "bootstrap-sass", "3.4.1"
 
 gem "config"
