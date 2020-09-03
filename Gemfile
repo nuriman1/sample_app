@@ -7,6 +7,8 @@ gem "rails", "~> 6.0.3", ">= 6.0.3.2"
 
 gem "rails-i18n"
 
+gem "bcrypt", "3.1.13"
+
 gem "bootstrap-sass", "3.4.1"
 
 gem "config"
