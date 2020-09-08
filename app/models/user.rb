@@ -3,8 +3,8 @@ class User < ApplicationRecord
     length: { maximum: Settings.validations.name.max_length }
 
   validates :email, presence: true, 
-    length: { maximum: Settings.validation.email.max_length },
-    format: { with: Settings.validation.email.regex },
+    length: { maximum: Settings.validations.email.max_length },
+    format: { with: Settings.validations.email.regex },
     uniqueness: true
   
   validates :password, presence: true, 
