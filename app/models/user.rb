@@ -13,4 +13,12 @@ class User < ApplicationRecord
   has_secure_password
 
   before_save :downcase_email
+
+  class << self
+    def digest string
+      cost = ActiveModel::SecurePassword.min_cost ? Bcrypt::Engine::MIN_COST :
+                                                  Bcrypt::Engine.cost
+      Bcrypt::Password.create string, cost: cost
+    end
+  end
 end
