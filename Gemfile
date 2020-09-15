@@ -9,6 +9,12 @@ gem "rails-i18n"
 
 gem "bcrypt", "3.1.13"
 
+gem "faker", "2.1.2"
+
+gem "kaminari"
+
+gem "kaminari-bootstrap"
+
 gem "bootstrap-sass", "3.4.1"
 
 gem "config"
