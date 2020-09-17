@@ -14,13 +14,13 @@ Rails.application.configure do
 
   # Enable/disable caching. By default caching is disabled.
   # Run rails dev:cache to toggle caching.
-  if Rails.root.join('tmp', 'caching-dev.txt').exist?
+  if Rails.root.join("tmp", "caching-dev.txt").exist?
     config.action_controller.perform_caching = true
     config.action_controller.enable_fragment_cache_logging = true
 
     config.cache_store = :memory_store
     config.public_file_server.headers = {
-      'Cache-Control' => "public, max-age=#{2.days.to_i}"
+      "Cache-Control" => "public, max-age=#{2.days.to_i}"
     }
   else
     config.action_controller.perform_caching = false
@@ -31,11 +31,19 @@ Rails.application.configure do
   # Store uploaded files on the local file system (see config/storage.yml for options).
   config.active_storage.service = :local
 
-  # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = false
-
-  config.action_mailer.perform_caching = false
-
+# Don"t care if the mailer can"t send.
+config.action_mailer.raise_delivery_errors = true
+config.action_mailer.delivery_method = :smtp
+host = "localhost"
+config.action_mailer.default_url_options = { host: host, port: '3000', protocol: 'http' }
+ActionMailer::Base.smtp_settings = {
+  address: 'smtp.gmail.com',
+  port: '587',
+  authentication: :plain,
+  user_name: ENV[ "YOUR_USERNAME" ],
+  password: ENV[ "YOUR_PASSWORD" ],
+  enable_starttls_auto: true
+}
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
 
