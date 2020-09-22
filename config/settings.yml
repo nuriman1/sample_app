@@ -19,6 +19,9 @@ validations:
     regex: !ruby/regexp '/\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i'
   password:
     min_length: 6
+  micropost:
+    max_length: 140
 
 remember_me: 1
 password_expired_time: 2
+number_5: 5
